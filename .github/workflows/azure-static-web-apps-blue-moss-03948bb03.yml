@@ -43,3 +43,12 @@ jobs:
         with:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_BLUE_MOSS_03948BB03 }}
           action: "close"
+          with:
+            azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN }}
+            repo_token: ${{ secrets.GITHUB_TOKEN }}
+            action: 'upload'
+            app_location: 'src/dist'
+            api_location: 'api'
+            output_location: ''
+            skip_app_build: true
+            
